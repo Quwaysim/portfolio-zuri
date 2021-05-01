@@ -23,32 +23,33 @@ class MyApp extends StatelessWidget {
                   bottomLeft: Radius.circular(16.0),
                   bottomRight: Radius.circular(16.0),
                 ),
-                color: Color(0xFF607D8B),
+                color: Colors.blueGrey[700],
               ),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
                   children: [
                     Expanded(
-                      flex: 4,
+                      flex: 5,
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               'QAASIM, Muhammad Akorede',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize: 18.0,
+                                fontSize: 17.0,
                                 color: _headerTextColor,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
                             Text(
                               '(Quwaysim)',
                               style: TextStyle(color: _headerTextColor),
+                            ),
+                            SizedBox(
+                              height: 8.0,
                             ),
                             Text(
                               'Android Developer (Flutter x Native)',
@@ -59,10 +60,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: 1,
+                      flex: 2,
                       child: CircleAvatar(
                         backgroundColor: Colors.white,
-                        radius: 40.0,
+                        radius: 200.0,
                         backgroundImage: AssetImage('images/quwaysim.jpg'),
                       ),
                     ),
@@ -96,10 +97,11 @@ class MyApp extends StatelessWidget {
                       subtitle: 'qaasim405@gmail.com',
                     ),
                     DetailsListCard(
+                      padding: 16.0,
                       iconData: Icons.widgets_outlined,
                       title: 'Skills and Tools',
                       subtitle:
-                          'Android Studio; Native Android Dev - Java, Multiplatform - Flutter\n',
+                          'Android Studio; Native Android Dev - Java, Multiplatform - Flutter',
                     ),
                   ],
                 ),
@@ -129,13 +131,12 @@ class DetailsListCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
           color: Color(0x22607D8B),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 0.0 ?? 8.0),
-          child: ListTile(
-            leading: Icon(iconData),
-            title: Text(title),
-            subtitle: Text(subtitle),
-          ),
+        child: ListTile(
+          contentPadding:
+              EdgeInsets.symmetric(vertical: padding ?? 0.0, horizontal: 16.0),
+          leading: Icon(iconData),
+          title: Text(title),
+          subtitle: Text(subtitle),
         ),
       ),
     );
