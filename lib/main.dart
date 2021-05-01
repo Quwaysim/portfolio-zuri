@@ -30,19 +30,30 @@ class MyApp extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 4,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'QAASIM, Muhammad Akorede',
-                              style: TextStyle(
-                                fontSize: 18.0,
-                                color: Colors.black54,
-                                fontWeight: FontWeight.bold,
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Text(
+                                'QAASIM, Muhammad Akorede',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text('Android Developer (Flutter x Native)')
-                          ],
+                              SizedBox(
+                                height: 8.0,
+                              ),
+                              Text(
+                                '(Quwaysim)',
+                                style: TextStyle(color: Colors.black54),
+                              ),
+                              Text(
+                                'Android Developer (Flutter x Native)',
+                                style: TextStyle(color: Colors.black54),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                       Expanded(
@@ -56,7 +67,7 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
